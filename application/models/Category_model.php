@@ -35,4 +35,13 @@ class Category_model extends CI_Model  {
 		$this->db->where('id',$id);
 		$this->db->delete('tbl_categorys');
 	}
+
+	// Front Function
+
+	public function getAllCategorysFront($params=[])
+	{
+	 	$this->db->where('tbl_categorys.status',1);
+		$result = $this->db->get('tbl_categorys')->result_array();
+		return $result;
+	}
 }

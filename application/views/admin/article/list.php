@@ -96,8 +96,10 @@
 			    				<?php } ?>
 			    				</tbody>
 			    		</table>
-			    		<div>
-			    			<?php echo $pagination_links; ?>
+			    		<div class="row">
+			    			<div class="col-md-12">
+			    				<?php echo $pagination_links; ?>
+			    			</div>	
 			    		</div>
 			    	</div>
 

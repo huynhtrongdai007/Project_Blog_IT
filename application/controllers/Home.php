@@ -5,7 +5,14 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('frond/home');
+		$this->load->model('Article_model');
+		$this->load->helper('text');
+		$param['offset'] = 4;
+		$param['limit'] = 0; 
+		$articles = $this->Article_model->getAllArticlesFront($param);
+		$data['articles'] = $articles;
+		
+		$this->load->view('front/home',$data);
 	}
 
 }

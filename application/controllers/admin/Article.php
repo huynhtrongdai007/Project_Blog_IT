@@ -60,6 +60,7 @@ public function __construct()
 		$data['pagination_links'] = $pagination_links;
 		$data['mainModule'] = 'article';
 		$data['subModule'] = 'viewArticle';
+		$data['pagination_links']=$pagination_links;
 		$this->load->view('admin/article/list',$data);
 	}	 
 	// day la phuong thuc tao acticle
